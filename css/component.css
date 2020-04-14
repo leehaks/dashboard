@@ -1,0 +1,444 @@
+/* button component */
+.btn {
+  display: inline-block;
+  background: transparent;
+  min-width: 75px;
+  min-height: 30px;
+  line-height: 30px;
+  border: 1px solid transparent;
+  outline: none;
+  padding: 0 1em;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  color: currentColor;
+  -webkit-transform: skew(-0.1deg);
+          transform: skew(-0.1deg);
+}
+
+.btn span {
+  margin-left: .5rem;
+}
+
+.btn i {
+  font-size: 1em;
+  opacity: .3;
+}
+
+.btn.primary {
+  background: #1f76b8;
+  color: #fff;
+}
+
+.btn.link {
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  line-height: 1rem;
+}
+
+/* navigation */
+.navbar a {
+  background: transparent;
+  width: 100%;
+  padding: .75rem 1rem;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.navbar a:hover,
+.navbar a .active {
+  background: #313854;
+}
+
+.navbar a:hover i,
+.navbar a .active i {
+  opacity: 1;
+}
+
+.navbar a i {
+  opacity: .5;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.navbar a span {
+  margin-left: .5rem;
+}
+
+.navbar .menu {
+  margin-top: 1rem;
+}
+
+.navbar .menu:first-child {
+  margin-top: 0;
+}
+
+.navbar .menu-tit {
+  padding: .25rem 1rem;
+  font-size: .85em;
+}
+
+/* profile component */
+.profile-component {
+  background: #4d5573;
+  padding: 1.5em 0;
+  margin-bottom: 1rem;
+}
+
+.profile-component figure {
+  text-align: center;
+}
+
+.profile-component figure figcaption {
+  margin-top: .5rem;
+}
+
+.profile-component figure img {
+  background: #fff;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  line-height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-component .profile-btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -ms- flex;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin-top: 1rem;
+}
+
+/* crumb-component */
+.crumb-component ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -ms- flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.crumb-component ul li:nth-child(2n) {
+  width: 5px;
+  height: 5px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-color: #394263;
+  margin-right: .55rem;
+  margin-left: .45rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.crumb-component ul li a {
+  -webkit-transform: skew(-0.1deg);
+          transform: skew(-0.1deg);
+  font-size: .725rem;
+}
+
+/* table-component */
+.table-component, .table-component table {
+  width: 100%;
+  height: 100%;
+}
+
+.table-component table {
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-color: #dbe1e8;
+}
+
+.table-component table th {
+  font-family: 'NanumSquare-ExtraBold', san-serif;
+}
+
+.table-component table td, .table-component table th {
+  padding: .75em;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #dbe1e8;
+  vertical-align: middle;
+  text-align: center;
+  font-size: .75rem;
+  color: currentColor;
+}
+
+.table-component #userSearchTable th:first-child,
+.table-component #userSearchTable td:first-child,
+.table-component #userSearchTable table th:first-child,
+.table-component table #userSearchTable th:first-child {
+  width: 120px;
+}
+
+/* card */
+.card {
+  background: #fff;
+  border: 1px solid #dbe1e8;
+}
+
+.card .tit {
+  background: #f4f7fb;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 1em;
+  font-size: .775rem;
+  font-weight: 700;
+  border-bottom: 1px solid #dbe1e8;
+}
+
+.card .tit span[id] {
+  font-weight: 700;
+}
+
+.card .con {
+  padding: 1em;
+}
+
+.card .bot {
+  height: 60px;
+  line-height: 60px;
+  padding: 0 1em;
+}
+
+/* chart */
+.chart-container {
+  height: 100%;
+}
+
+/* form */
+form label.label-tit {
+  display: inline-block;
+  margin-bottom: .35rem;
+  font-size: .725rem;
+  font-weight: 700;
+  color: #454d5b;
+}
+
+form input {
+  background: #f6f6f6;
+  width: 100%;
+  min-height: 30px;
+  padding-left: .5em;
+  border: 1px solid #ddd;
+  border-radius: .225rem;
+}
+
+form .sch-box, form .chk-box, form .rdo-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -ms- flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  position: relative;
+}
+
+form .chk-box label,
+form .rdo-box label {
+  min-width: 0;
+  min-height: 35px;
+  line-height: 1rem;
+  font-size: .775rem;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -ms- flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+form .chk-box label::before,
+form .rdo-box label::before {
+  content: '';
+  position: relative;
+  display: inline-block;
+  min-width: 15px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid;
+  border-radius: .25rem;
+  margin-right: .5rem;
+}
+
+form .chk-box input {
+  display: none;
+}
+
+form .chk-box input:checked + label::after {
+  display: block;
+}
+
+form .chk-box label::after {
+  content: '';
+  display: none;
+  width: 8px;
+  height: 6px;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #FF661A;
+  position: absolute;
+  top: 13px;
+  left: 3px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+form .rdo-box input {
+  display: none;
+}
+
+form .rdo-box input:checked + label::before {
+  border-color: #FF661A;
+}
+
+form .rdo-box label::before {
+  border-width: 5px;
+}
+
+form .rdo-box label::after {
+  content: '';
+  background-color: #fff;
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  top: 14px;
+  left: 4px;
+  border-radius: .15rem;
+}
+
+form .sch-box input[type="text"] {
+  background: #eaedf1;
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  padding-left: 1em;
+  padding-right: 2.75em;
+  border: 1px solid;
+  border-radius: .5rem;
+  font-size: .75rem;
+}
+
+form .sch-box input[type="submit"] {
+  background: url(../img/search.svg) center center no-repeat;
+  background-size: 15px;
+  width: 35px;
+  min-width: 25px;
+  border: none;
+  position: absolute;
+  top: -2px;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+form .sel-box select {
+  background: url("../img/icon/arrow-down.svg") calc(100% - 10px) center no-repeat;
+  background-size: 10px;
+  padding-left: 1em;
+  padding-right: 2.75em;
+}
+
+/*  */
+.img-component[data-flow="row"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -ms- flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.img-component[data-flow="row"] .img-box {
+  margin-right: 1rem;
+}
+
+.img-component[data-flow="row"] .txt-box {
+  width: 100%;
+}
+
+.img-component .img-box.icon {
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 28px;
+}
+
+.img-component .txt-box span[id] {
+  display: inline-block;
+  margin-top: .25rem;
+  padding-right: .15em;
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+
+.img-component .txt-box .compare-num {
+  text-align: right;
+}
+
+.img-component .txt-box .compare-num i {
+  margin-right: .35rem;
+}
+
+.img-component .txt-box .compare-num.down {
+  color: #60b5ef;
+}
+
+.img-component .txt-box .compare-num.up {
+  color: #f97e98;
+}
+
+.block-tit {
+  font-size: .85rem;
+}
+
+.date-component [class*="date-"] {
+  position: relative;
+  display: block;
+}
+
+.date-component .ui-datepicker-trigger {
+  background: transparent;
+  width: 14px;
+  border: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+
+.dataTables_wrapper {
+  font-size: .825rem;
+}
+
+.dataTables_wrapper .ui-toolbar {
+  padding: 1em !important;
+}
+
+.dataTables_wrapper .ui-widget-header {
+  background: transparent;
+}
+
+.dataTables_wrapper .ui-state-default {
+  background: transparent;
+  border-right: none;
+  border-top: none;
+}
+
+.dataTables_wrapper .dataTable.no-footer {
+  border-bottom-color: #dbe1e8;
+}
+/*# sourceMappingURL=component.css.map */

@@ -1,0 +1,53 @@
+@import url('../lib/all.min.css'); 
+@import url('reset.css');
+@import url('common.css');
+@import url('page.css');
+@import url('component.css');
+@import url('import.css'); 
+
+@font-face { 
+    font-family: 'Montserrat';
+    font-weight: 400;
+    src: url('../font/MontserratRegular.eot');
+    src: url('../font/MontserratRegular.eot?#iefix') format('embedded-opentype'),
+         url('../font/MontserratRegular.ttf') format('truetype'),
+         url('../font/MontserratRegular.woff') format('woff'); 
+}
+@font-face { 
+    font-family: 'Montserratbold';
+    font-weight: 700;
+    src: url('../font/MontserratBold.ttf.ttf');
+}
+
+@font-face { 
+    font-family: 'MontserratExtraBold';
+    font-weight: 900;
+    src: url('../font/MontserratExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 400;
+    src: url('../font/NanumSquareR.eot');
+    src: url('../font/NanumSquareR.eot?#iefix') format('embedded-opentype'),
+    url('../font/NanumSquareR.ttf') format('truetype'),
+         url('../font/NanumSquareR.woff') format('woff'); 
+}
+
+@font-face {
+    font-family: 'NanumSquarebold';
+    font-weight: 700;
+    src: url('../font/NanumSquareB.eot');
+    src: url('../font/NanumSquareB.eot?#iefix') format('embedded-opentype'),
+         url('../font/NanumSquareB.woff') format('woff'),
+         url('../font/NanumSquareB.ttf') format('truetype');
+    }
+
+@font-face {
+    font-family: 'NanumSquareExtraBold';
+    font-weight: 900;
+    src: url('../font/NanumSquareEB.eot');
+    src: url('../font/NanumSquareEB.eot?#iefix') format('embedded-opentype'),
+         url('../font/NanumSquareEB.woff') format('woff'),
+         url('../font/NanumSquareEB.ttf') format('truetype');
+}

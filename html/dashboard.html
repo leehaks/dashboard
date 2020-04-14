@@ -1,0 +1,407 @@
+﻿
+<div class="main-content">
+
+    <div class="row">
+        <div class="crumb-component">
+            <ul>
+                <li><a><i class="fas fa-home"></i></a></li>
+                <li></li>
+                <li id="depthFirst"><a>Dashboard</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="block-tit mb-10">
+            <h3><strong>최근 10일 데이터</strong></h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="tit flex items-center">
+                        <h4>매출</h4>
+                        <p class="ml-auto text-sm"><span id="monthDateNum">3</span>월 매출: <span id="monthMoney">6,802,384</span> 원</p>
+                    </div>
+                    <div class="con">
+                        <div class="chart-container">
+                            <canvas id="monthMoneyChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card"> 
+                    <div class="tit flex items-center">
+                        <h4>거래</h4>
+                        <p class="ml-auto text-sm"><span id="tranceDateNum">3</span>월 매출: <span id="tranceMoney">125</span> 건</p>
+                    </div>
+                    <div class="con">
+                        <div class="chart-container">
+                            <canvas id="tranceMoneyChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="tit flex items-center">
+                        <h4>견적요청</h4>
+                        <p class="ml-auto text-sm"><span id="customRequestNum">3</span>월 견적요청: <span id="customRequestMoney">6,802,384</span> 원</p>
+                    </div>
+                    <div class="con">
+                        <div class="chart-container">
+                            <canvas id="customRequestChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="block-tit mb-10">
+            <h3><strong>현재 누적통계</strong></h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="card p-10">
+                    <div class="img-component" data-flow="row">
+                        <div class="img-box icon"><i class="far fa-user"></i></div>
+                        <div class="txt-box">
+                            <p>사용자</p>
+                            <p><span id="userTotalNum">123,457</span>명</p>
+                            <p class="compare-num up"><i class="fas fa-arrow-up"></i>238</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card p-10">
+                    <div class="img-component" data-flow="row">
+                        <div class="img-box icon"><i class="far fa-building"></i></div>
+                        <div class="txt-box">
+                            <p>사업자</p>
+                            <p><span id="busiTotalNum">94,256</span>명</p>
+                            <p class="compare-num down"><i class="fas fa-arrow-down"></i>231</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card p-10">
+                    <div class="img-component" data-flow="row">
+                        <div class="img-box icon"><i class="fas fa-desktop"></i></div>
+                        <div class="txt-box">
+                            <p>게재중</p>
+                            <p><span id="newsInputTotalNum">42,392</span>건</p>
+                            <p class="compare-num up"><i class="fas fa-arrow-up"></i>142</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card p-10">
+                    <div class="img-component" data-flow="row">
+                        <div class="img-box icon"><i class="fas fa-gift"></i></div>
+                        <div class="txt-box">
+                            <p>상품/서비스</p>
+                            <p><span id="serviceTotalNum">642,120</span>개</p>
+                            <p class="compare-num up"><i class="fas fa-arrow-up"></i>456</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="block-tit mb-10">
+            <h3><strong>미처리 목록</strong></h3>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="tit flex items-center">
+                        <h4>1:1 문의게시판</h4>
+                        <p class="ml-auto text-sm"><small>미처리</small> <span id="">23</span> 건</p>
+                    </div>
+                    <div class="con">
+                        <div class="table-component">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>제목</th>
+                                        <th>작성자</th>
+                                        <th>구분</th>
+                                        <th>작성일시</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="text-left">LED등을 주문했는데 3일째 안오네요</td>
+                                        <td>Bitnine</td>
+                                        <td>사용자</td>
+                                        <td>2020.03.03 17:51</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="text-left">LED등을 주문했는데 3일째 안오네요</td>
+                                        <td>Bitnine</td>
+                                        <td>사업자</td>
+                                        <td>2020.03.03 17:51</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card"> 
+                    <div class="tit flex items-center">
+                        <h4>거래</h4>
+                        <p class="ml-auto text-sm"><small>미처리</small> <span id="tranceDateNum">3</span> 건</p>
+                    </div>
+                    <div class="con">
+                        <div class="table-component">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>제목</th>
+                                        <th>작성자</th>
+                                        <th>구분</th>
+                                        <th>작성일시</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="text-left">LED등을 주문했는데 3일째 안오네요</td>
+                                        <td>Bitnine</td>
+                                        <td>사용자</td>
+                                        <td>2020.03.03 17:51</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="text-left">LED등을 주문했는데 3일째 안오네요</td>
+                                        <td>Bitnine</td>
+                                        <td>사업자</td>
+                                        <td>2020.03.03 17:51</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="tit flex items-center">
+                        <h4>견적요청</h4>
+                        <p class="ml-auto text-sm"><small>미처리</small> <span id="customRequestNum">3</span> 건</p>
+                    </div>
+                    <div class="con">
+                        <div class="table-component">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>제목</th>
+                                        <th>작성자</th>
+                                        <th>구분</th>
+                                        <th>작성일시</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="text-left">LED등을 주문했는데 3일째 안오네요</td>
+                                        <td>Bitnine</td>
+                                        <td>사용자</td>
+                                        <td>2020.03.03 17:51</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="text-left">LED등을 주문했는데 3일째 안오네요</td>
+                                        <td>Bitnine</td>
+                                        <td>사업자</td>
+                                        <td>2020.03.03 17:51</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="tit flex items-center">
+                        <h4>사업자요청</h4>
+                        <p class="ml-auto text-sm"><small>미처리</small> <span id="customRequestNum">13</span> 건</p>
+                    </div>
+                    <div class="con">
+                        <div class="table-component">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>제목</th>
+                                        <th>작성자</th>
+                                        <th>구분</th>
+                                        <th>작성일시</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="text-left">LED등을 주문했는데 3일째 안오네요</td>
+                                        <td>Bitnine</td>
+                                        <td>사용자</td>
+                                        <td>2020.03.03 17:51</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="text-left">LED등을 주문했는데 3일째 안오네요</td>
+                                        <td>Bitnine</td>
+                                        <td>사업자</td>
+                                        <td>2020.03.03 17:51</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+	let ctx1 = document.getElementById('monthMoneyChart');
+	let myChartA = new Chart(ctx1, {
+		type: 'bar',
+		data: {
+			labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+			datasets: [{
+				label: '# of Votes',
+				data: [12, 19, 3, 5, 2, 3],
+				backgroundColor: [
+					'rgba(255, 99, 132, 0.2)',
+					'rgba(54, 162, 235, 0.2)',
+					'rgba(255, 206, 86, 0.2)',
+					'rgba(75, 192, 192, 0.2)',
+					'rgba(153, 102, 255, 0.2)',
+					'rgba(255, 159, 64, 0.2)'
+				],
+				borderColor: [
+					'rgba(255, 99, 132, 1)',
+					'rgba(54, 162, 235, 1)',
+					'rgba(255, 206, 86, 1)',
+					'rgba(75, 192, 192, 1)',
+					'rgba(153, 102, 255, 1)',
+					'rgba(255, 159, 64, 1)'
+				],
+				borderWidth: 1
+			}]
+		},
+		options: {
+			responsive: true,
+			scales: {
+				yAxes: [{
+					ticks: {
+						beginAtZero: true
+					}
+				}]
+			},
+		}
+	});
+
+    let ctx2 = document.getElementById('tranceMoneyChart');
+	let myChartB = new Chart(ctx2, {
+		type: 'bar',
+		data: {
+			labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+			datasets: [{
+				label: '# of Votes',
+				data: [12, 19, 3, 5, 2, 3],
+				backgroundColor: [
+					'rgba(255, 99, 132, 0.2)',
+					'rgba(54, 162, 235, 0.2)',
+					'rgba(255, 206, 86, 0.2)',
+					'rgba(75, 192, 192, 0.2)',
+					'rgba(153, 102, 255, 0.2)',
+					'rgba(255, 159, 64, 0.2)'
+				],
+				borderColor: [
+					'rgba(255, 99, 132, 1)',
+					'rgba(54, 162, 235, 1)',
+					'rgba(255, 206, 86, 1)',
+					'rgba(75, 192, 192, 1)',
+					'rgba(153, 102, 255, 1)',
+					'rgba(255, 159, 64, 1)'
+				],
+				borderWidth: 1
+			}]
+		},
+		options: {
+			responsive: true,
+			scales: {
+				yAxes: [{
+					ticks: {
+						beginAtZero: true
+					}
+				}]
+			},
+		}
+	});
+
+    let ctx3 = document.getElementById('customRequestChart');
+	let myChartC = new Chart(ctx3, {
+		type: 'bar',
+		data: {
+			labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+			datasets: [{
+				label: '# of Votes',
+				data: [12, 19, 3, 5, 2, 3],
+				backgroundColor: [
+					'rgba(255, 99, 132, 0.2)',
+					'rgba(54, 162, 235, 0.2)',
+					'rgba(255, 206, 86, 0.2)',
+					'rgba(75, 192, 192, 0.2)',
+					'rgba(153, 102, 255, 0.2)',
+					'rgba(255, 159, 64, 0.2)'
+				],
+				borderColor: [
+					'rgba(255, 99, 132, 1)',
+					'rgba(54, 162, 235, 1)',
+					'rgba(255, 206, 86, 1)',
+					'rgba(75, 192, 192, 1)',
+					'rgba(153, 102, 255, 1)',
+					'rgba(255, 159, 64, 1)'
+				],
+				borderWidth: 1
+			}]
+		},
+		options: {
+			responsive: true,
+			scales: {
+				yAxes: [{
+					ticks: {
+						beginAtZero: true
+					}
+				}]
+			},
+		}
+	});
+</script>

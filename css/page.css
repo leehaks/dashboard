@@ -1,0 +1,107 @@
+#wrap {
+  background: #22282c;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  position: relative;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  -webkit-transition: left .45s ease-in-out;
+  transition: left .45s ease-in-out;
+}
+
+#headerMenu {
+  /* background: #15191c;  */
+  background: #394263;
+  width: 225px;
+  min-width: 225px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size: 14px;
+  color: #fff;
+}
+
+header.off {
+  left: -225px;
+}
+
+header h1 {
+  position: relative;
+}
+
+header h1 a.logo {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+}
+
+header h1 a.logo i {
+  font-size: 32px;
+}
+
+header h1 button.btn {
+  position: absolute;
+  top: 0;
+  right: 1.25rem;
+  bottom: 0;
+}
+
+.brick {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* ---------------------------------------------------------- */
+main {
+  background: #eaedf1;
+  width: 100%;
+  height: 100vh;
+  padding-left: 225px;
+  -webkit-transition: padding-left .45s ease-in-out;
+  transition: padding-left .45s ease-in-out;
+}
+
+main.full-screen {
+  padding-left: 0;
+}
+
+.page-head {
+  background: #fff;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 1em;
+  border-bottom: 1px solid #dbe1e8;
+}
+
+.page-main {
+  height: calc(100vh - 60px);
+  padding: 1em;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    padding-left: 0;
+  }
+}
+/*# sourceMappingURL=page.css.map */
