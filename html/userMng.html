@@ -4,9 +4,9 @@
             <ul>
                 <li><a><i class="fas fa-home"></i></a></li>
                 <li></li>
-				<li id="depthFirst"><a>거래관리</a></li>
+				<li id="depthFirst"><a>사용자관리</a></li>
 				<li></li>
-				<li id="depthSecond"><a>거래중</a></li>
+				<li id="depthSecond"><a>사용자관리</a></li>
             </ul>
         </div>
     </div>
@@ -15,25 +15,25 @@
 		<div class="col-lg-12 col-md-12 col-sm-12">
 			<div class="card">
 				<div class="tit flex items-center">
-					<h4>거래검색</h4>
+					<h4>사용자 검색</h4>
 				</div>
 				<div class="con">
 					<form class="row">
+						<div class="col-lg-2 col-md-2 col-sm-12">
+							<div>
+								<label class="label-tit">이메일주소</label>
+								<input type="text" />
+							</div>
+						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12">
 							<div>
-								<label class="label-tit">상태</label>
+								<label class="label-tit">내용</label>
 								<input type="text" />
 							</div>
 						</div>
 						<div class="col-lg-2 col-md-2 col-sm-12">
 							<div>
-								<label class="label-tit">사업자</label>
-								<input type="text" />
-							</div>
-						</div>
-						<div class="col-lg-2 col-md-2 col-sm-12">
-							<div>
-								<label class="label-tit">작성자</label>
+								<label class="label-tit">주소</label>
 								<input type="text" />
 							</div>
 						</div>
@@ -52,7 +52,7 @@
 									<input type="text" id="dateTo" />
 								</div>
 							</div>
-						</div>
+						</div>					
 					</form>
 				</div>
 				<div class="bot text-right">
@@ -66,7 +66,7 @@
 		<div class="col-lg-12 col-md-12 col-sm-12">
 			<div class="card">
 				<div class="tit flex items-center">
-					<h4>거래리스트</h4>
+					<h4>사용자 리스트</h4>
 				</div>
 				<div class="con">
 					<div class="table-component">
@@ -74,72 +74,51 @@
 							<thead>
 								<tr>
 									<th>No</th>
-									<th>상태</th>
-									<th>상품/서비스명</th>
-									<th>금액</th>
-									<th>서비스일시</th>
+									<th>이름</th>
+									<th>이메일주소</th>
 									<th>주소</th>
-									<th>사업자</th>
-									<th>작성자</th>
-									<th>작성일시</th>
+									<th>인증</th>
+									<th>간편</th>
+									<th>가입일시</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
 									<td>1</td>
-									<td><span class="label-status-complete">결제완료</span></td>
-									<td>맞춤견적</td>
-									<td>210,000</td>
-									<td>2020.03.18 16:00</td>
-									<td>서울시 강서구 양천로</td>
-									<td>수리수리</td>
-									<td>아이언맨</td>
-									<td>2020.03.18 16:00</td>
+									<td>홍길동</td>
+									<td>bitnine@bitnine.net</td>
+									<td>서울시강서구양천로</td>
+									<td><span class="label-confirm">인증</span></td>
+									<td><span class="label-register">등록</span></td>
+									<td>2020.03.18 12:31</td>
 								</tr>
 								<tr>
 									<td>2</td>
-									<td><span class="label-status-arrive">견적도착</span></td>
-									<td>맞춤견적</td>
-									<td>210,000</td>
-									<td>2020.03.18 16:00</td>
-									<td>서울시 강서구 양천로</td>
-									<td>수리수리</td>
-									<td>아이언맨</td>
-									<td>2020.03.18 16:00</td>
+									<td>홍길동</td>
+									<td>bitnine@bitnine.net</td>
+									<td>서울시강서구양천로</td>
+									<td><span class="label-confirm-no">미인증</span></td>
+									<td><span class="label-register-no">미등록</span></td>
+									<td>2020.03.18 12:31</td>
 								</tr>
 								<tr>
 									<td>3</td>
-									<td><span class="label-status-request">결제요청</span></td>
-									<td>맞춤견적</td>
-									<td>210,000</td>
-									<td>2020.03.18 16:00</td>
-									<td>서울시 강서구 양천로</td>
-									<td>수리수리</td>
-									<td>아이언맨</td>
-									<td>2020.03.18 16:00</td>
+									<td>홍길동</td>
+									<td>bitnine@bitnine.net</td>
+									<td>서울시강서구양천로</td>
+									<td><span class="label-confirm">인증</span></td>
+									<td><span class="label-register-no">미등록</span></td>
+									<td>2020.03.18 12:31</td>
 								</tr>
 								<tr>
 									<td>4</td>
-									<td><span class="label-status-complete">결제완료</span></td>
-									<td>맞춤견적</td>
-									<td>210,000</td>
-									<td>2020.03.18 16:00</td>
-									<td>서울시 강서구 양천로</td>
-									<td>수리수리</td>
-									<td>아이언맨</td>
-									<td>2020.03.18 16:00</td>
+									<td>홍길동</td>
+									<td>bitnine@bitnine.net</td>
+									<td>서울시강서구양천로</td>
+									<td><span class="label-confirm-no">미인증</span></td>
+									<td><span class="label-register">등록</span></td>
+									<td>2020.03.18 12:31</td>
 								</tr>
-								<tr>
-									<td>5</td>
-									<td><span class="label-status-complete">결제완료</span></td>
-									<td>맞춤견적</td>
-									<td>210,000</td>
-									<td>2020.03.18 16:00</td>
-									<td>서울시 강서구 양천로</td>
-									<td>수리수리</td>
-									<td>아이언맨</td>
-									<td>2020.03.18 16:00</td>
-								</tr>								
 							</tbody>
 						</table>
 					</div>

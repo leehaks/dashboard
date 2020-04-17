@@ -28,8 +28,8 @@ header {
   color: #fff;
 }
 
-header.off {
-  left: -225px;
+header.show {
+  left: 0;
 }
 
 header h1 {
@@ -59,9 +59,20 @@ header h1 button.btn {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.25);
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 10;
+}
+
+.brick.show {
+  display: block;
+}
+
+#headerHideBtn,
+#headerShowBtn {
+  display: none;
 }
 
 /* ---------------------------------------------------------- */
@@ -72,10 +83,6 @@ main {
   padding-left: 225px;
   -webkit-transition: padding-left .45s ease-in-out;
   transition: padding-left .45s ease-in-out;
-}
-
-main.full-screen {
-  padding-left: 0;
 }
 
 .page-head {
@@ -100,8 +107,15 @@ main.full-screen {
 }
 
 @media screen and (max-width: 1200px) {
+  header {
+    left: -225px;
+  }
   main {
     padding-left: 0;
+  }
+  #headerHideBtn,
+  #headerShowBtn {
+    display: inline-block;
   }
 }
 /*# sourceMappingURL=page.css.map */

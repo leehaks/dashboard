@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
     htmlLoad("header", "./html/header.html"); 
-    htmlLoad("#mainContent", "./html/transMng.html"); 
+    htmlLoad("#mainContent", "./html/dashboard.html"); 
     htmlLoad("#mainHead", "./html/pagehead.html"); 
  });
 
@@ -10,7 +10,6 @@ function htmlLoad(selector, htmlPath) {
         targetTitle(); 
         pageLoad(); 
         headerToggleBtn(); 
-        currentPage(); 
     }); 
 }
 
@@ -35,66 +34,43 @@ function pageLoad() {
         $(this).addClass('active'); 
         currentActiveAnchor = $(this); 
 
+        let boxWidth = $(window).width()
+        if( boxWidth < 1200 ) { 
+            $('#header').removeClass('show'); 
+            $('#brick').removeClass('show');
+        }
+
         let linkText = $(this).text(); 
         console.log("value",linkText); 
         $('#headerTitle').text(linkText); 
     })
 }
 
-function currentPage() { 
-    let boxWidth = $(window).width()
-    if( boxWidth >= 1425 ) { 
-        $('header').removeClass('off'); 
-        $('main').removeClass('full-screen');
-        $('#headerShowBtn').addClass('hidden'); 
-    }else if( boxWidth < 1425 ) { 
-        $('header').addClass('off'); 
-        $('main').addClass('full-screen');
-        $('#headerShowBtn').removeClass('hidden'); 
-    }
-}
-
 function headerToggleBtn() { 
 
+    var resizeId;
     $(window).resize(function(e){    
-        let boxWidth = $(window).width()
-        if( $('header:not(.off)')) return; 
-        if( boxWidth >= 1425 ) { 
-            $('header').removeClass('off'); 
-            $('main').removeClass('full-screen');
-            $('#headerShowBtn').addClass('hidden'); 
-        }else if( boxWidth < 1425 ) { 
-            $('header').addClass('off'); 
-            $('main').addClass('full-screen');
-            $('#headerShowBtn').removeClass('hidden'); 
+        clearTimeout(resizeId);
+        resizeId = setTimeout(() => {
+            Chart.helpers.each(Chart.instances, instance => {
+                console.log("CALL headerToggleBtn")
+                instance.chart.resize();
+            });
+        }, 500);
+        let boxWidth = $(window).width(); 
+        if($('header').hasClass('show')) {
+            boxWidth >= 1200 ? $('#brick').removeClass('show') : $('#brick').addClass('show') 
         }
     })
 
-    $('#headerHideBtn').click(function(e){
-        let boxWidth = $(window).width()
-        if(boxWidth >= 1425) { 
-            $('header').addClass('off'); 
-            $('main').addClass('full-screen');
-            $('#headerShowBtn').removeClass('hidden'); 
-        }else if(boxWidth < 1425) { 
-            $('header').addClass('off'); 
-            $('.brick').addClass('hidden');
-        }
+    $('#headerHideBtn').click(function(e){ 
+        $('#header').removeClass('show');
+        $('#brick').removeClass('show');
     })
 
     $('#headerShowBtn').click(function(e){
-        let boxWidth = $(window).width()
-        if(boxWidth >= 1425) { 
-            $('header').removeClass('off'); 
-            $('main').removeClass('full-screen');
-            $('#headerShowBtn').addClass('hidden'); 
-        }else if(boxWidth < 1425){
-            $('header').removeClass('off'); 
-            $('main').removeClass('full-screen');
-            $('.brick').removeClass('hidden');
-        }
-    })
-
-   
+        $('#header').addClass('show');
+        $('#brick').addClass('show');
+    })   
 }
 

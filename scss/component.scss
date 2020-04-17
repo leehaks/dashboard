@@ -36,6 +36,15 @@
     margin-right: .5rem; 
 }
 
+@mixin inputStyle {
+    background: #f6f6f6; 
+    width: 100%; 
+    min-height: 30px; 
+    padding-left: .5em; 
+    border: 1px solid #ddd; 
+    border-radius: .225rem;
+}
+
 $borderBasic: 1px solid; 
 $primary: #1f76b8; 
 $grey: #dbe1e8; 
@@ -91,13 +100,14 @@ $orange: #FF661A;
         padding: .75rem 1rem; 
         transition: all .1s ease-in-out;
 
-        &:hover, 
-        .active { 
+        &:hover, &.active { 
             background: #313854;
             i { opacity: 1; }
         }
 
         i { 
+            min-width: 18px;
+            text-align: center;
             opacity: .5; 
             transition: all .1s ease-in-out;
         }
@@ -195,16 +205,27 @@ $orange: #FF661A;
         } 
         
         td { 
-            padding: .75em; 
-            border: { 
-                left: $borderBasic; 
-                bottom: $borderBasic; 
-                color: $grey; 
-            }
+            padding: .85em !important; 
+            border-bottom: $borderBasic $grey; 
             vertical-align: middle;
             text-align: center;
-            font-size: .75rem; 
+            font-size: .825rem; 
             color: currentColor; 
+            &:first-child { 
+                border-left: $borderBasic $grey; 
+            }
+        }
+
+        tbody { 
+            tr { 
+                &:nth-child(odd) { 
+                    background: #f9f9f9; 
+                }
+                &:hover {
+                    background: #f5f5f5; 
+                    cursor: pointer;
+                } 
+            }
         }
     }
 
@@ -264,12 +285,7 @@ form {
     }
 
     input { 
-        background: #f6f6f6; 
-        width: 100%; 
-        min-height: 30px; 
-        padding-left: .5em; 
-        border: 1px solid #ddd; 
-        border-radius: .225rem;
+        @include inputStyle; 
     }
 
     .sch-box, .chk-box, .rdo-box { 
@@ -449,12 +465,16 @@ form {
 }
 
 .dataTables_wrapper { 
-    font-size: .825rem; 
+    font-size: .875rem; 
+
+    select, input { 
+        @include inputStyle();
+        margin-left: 0 !important
+    }
+
     .ui-toolbar { padding: 1em !important; }
 
-    .ui-widget-header { 
-        background: transparent; 
-    }
+    .ui-widget-header { background: transparent; }
 
     .ui-state-default { 
         background: transparent; 
@@ -464,7 +484,33 @@ form {
         }    
     }
 
-    .dataTable.no-footer {
-        border-bottom-color: #dbe1e8; 
+    .dataTable.no-footer { border-bottom-color: #dbe1e8; }
+
+    [class*="label-"] { 
+        display: inline-block; 
+        min-width: 58px; 
+        height: 22px; 
+        line-height: 22px; 
+        border-radius: .25rem;
+        font-size: .75rem;
+        color: #fff; 
+
+        &[class$="complete"] { background: #1bbae1; }
+        &[class$="arrive"] { background: #27ae60; }
+        &[class$="request"] { background: #999999; }
+
+        &[class$="silver"] { background: #837f7e; } 
+        &[class$="gold"] { background: #e1ab3b; } 
+        &[class$="platinum"] { background: #0480bd; } 
+
+        &[class$="confirm"] { background: #1bbae1; } 
+        &[class$="register"] { background: #1bbae1; }
+        &[class$="no"] { background: #e74c3c; }
+
+        &[class$="busi"] { background: #2980b9; } 
+        &[class$="indi"] { background: #999999; }
+        
     }
+
+    
 }
