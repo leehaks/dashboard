@@ -1,8 +1,39 @@
 #wrap {
-  background: #22282c;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  min-width: 650px;
+  padding-left: 225px;
+  -webkit-transition: padding-left .45s ease-in-out;
+  transition: padding-left .45s ease-in-out;
+}
+
+#login {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: url("../img/login_background_PC.jpg");
+}
+
+#login .dialog-box {
+  max-width: 60%;
+  max-height: 35vw;
+}
+
+#login .dialog-box .login-component {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: inherit;
+}
+
+#login .dialog-box .login-component [class$="content"] {
+  width: 50%;
+}
+
+#login .dialog-box .login-component .bg-content {
+  background: url("../img/login_input_background.png") no-repeat;
+  background-size: contain;
 }
 
 header {
@@ -80,9 +111,6 @@ main {
   background: #eaedf1;
   width: 100%;
   height: 100vh;
-  padding-left: 225px;
-  -webkit-transition: padding-left .45s ease-in-out;
-  transition: padding-left .45s ease-in-out;
 }
 
 .page-head {
@@ -100,6 +128,7 @@ main {
 }
 
 .page-main {
+  background: #eaedf1;
   height: calc(100vh - 60px);
   padding: 1em;
   overflow-x: hidden;
@@ -110,7 +139,7 @@ main {
   header {
     left: -225px;
   }
-  main {
+  #wrap {
     padding-left: 0;
   }
   #headerHideBtn,

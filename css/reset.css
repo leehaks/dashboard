@@ -31,9 +31,11 @@ html, body {
 	width: 100%; 
 	height: 100vh; 
 	line-height: 1; 
+	overflow-x: auto;
+	overflow-y: hidden; 
 	position: relative;
 	font-size: 17px; 
-	color: #282828; 
+	color: #6c738c; 
 }
 
 ol, ul { list-style: none; }
@@ -60,7 +62,7 @@ select, input, textarea {
 a { 
 	display:block; 
 	text-decoration: none; 
-	transform: skew(-0.1deg); 
+	/* transform: skew(-0.1deg);  */
 	/* color: currentColor;  */
 	cursor: pointer;
 }

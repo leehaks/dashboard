@@ -10,7 +10,14 @@ function htmlLoad(selector, htmlPath) {
         targetTitle(); 
         pageLoad(); 
         headerToggleBtn(); 
+        scrollbar(); 
     }); 
+}
+
+function scrollbar() { 
+    $('#header').mCustomScrollbar({
+        theme:"minimal"
+    })
 }
 
 function targetTitle() { 
@@ -51,9 +58,9 @@ function headerToggleBtn() {
     var resizeId;
     $(window).resize(function(e){    
         clearTimeout(resizeId);
-        resizeId = setTimeout(() => {
-            Chart.helpers.each(Chart.instances, instance => {
-                console.log("CALL headerToggleBtn")
+        resizeId = setTimeout(function() {
+            Chart.helpers.each(Chart.instances, function(instance) {
+                // console.log("CALL headerToggleBtn")
                 instance.chart.resize();
             });
         }, 500);

@@ -1,10 +1,37 @@
 $width: 225px; 
 
-#wrap { 
-    background: #22282c; 
+@mixin basicSize { 
     width: 100%; 
-    height: 100vh;
+    height: 100vh; 
     overflow: hidden;
+}
+
+#wrap { 
+    @include basicSize; 
+    min-width: 650px; 
+    padding-left: $width; 
+    transition: padding-left .45s ease-in-out; 
+}
+
+#login { 
+    @include basicSize;  
+    background: url('../img/login_background_PC.jpg'); 
+
+    .dialog-box { 
+        max-width: 60%; 
+        max-height: 35vw; 
+
+        .login-component { 
+            display: flex; 
+            height: inherit; 
+            
+            [class$="content"] { width: 50%; }
+            .bg-content { 
+                background: url('../img/login_input_background.png') no-repeat; 
+                background-size: contain; 
+            }
+        }
+    }
 }
 
 header { 
@@ -73,8 +100,6 @@ main {
     background: #eaedf1; 
     width: 100%; 
     height: 100vh; 
-    padding-left: $width; 
-    transition: padding-left .45s ease-in-out; 
 }
 
 .page-head { 
@@ -90,6 +115,7 @@ main {
 }
 
 .page-main { 
+    background: #eaedf1; 
     height: calc(100vh - 60px); 
     padding: 1em; 
     overflow-x: hidden;
@@ -99,7 +125,7 @@ main {
 @media screen and ( max-width: 1200px ) { 
 
     header { left: -$width; }
-    main { padding-left: 0; }
+    #wrap { padding-left: 0; }
 
     #headerHideBtn, 
     #headerShowBtn { display: inline-block; }
