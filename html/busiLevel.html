@@ -1,0 +1,142 @@
+﻿<div class="main-content">
+    <div class="mb-10">
+        <div class="crumb-component">
+            <ul>
+                <li><a><i class="fas fa-home"></i></a></li>
+                <li></li>
+				<li id="depthFirst"><a>사업자인증</a></li>
+				<li></li>
+				<li id="depthSecond"><a>사업자레벨</a></li>
+            </ul>
+        </div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12">
+			<div class="card">
+				<div class="tit flex items-center">
+					<h4>사업자 레벨 추가</h4>
+				</div>
+				<div class="con">
+					<div class="row">
+						<div class="col-lg-2">
+							<form>
+								<input type="text" placeholder="등급명">
+							</form>
+						</div>
+						<div class="col-lg-2">
+							<form>
+								<input type="text" placeholder="수수료율">
+							</form>
+						</div>
+						<div class="col-lg-1">
+							<button class="btn primary">추가</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12">
+			<div class="card">
+				<div class="tit flex items-center">
+					<h4>사업자 레벨</h4>
+				</div>
+				<div class="con">
+					<div class="table-component">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>등급명</th>
+									<th>수수료율</th>
+									<th>사업자수</th>
+									<th>-</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>
+										<input type="text" value="플래티넘"/>
+									</td>
+									<td>
+										<input type="text" value="8%"/>
+									</td>
+									<td>
+										<span>1374</span>
+									</td>
+									<td>
+										<div class="btn-group">
+											<button class="btn btn-icon primary"><i class="fas fa-eraser"></i></button>
+											<button class="btn btn-icon primary"><i class="far fa-trash-alt"></i></button>
+										</div>
+									</td>									
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>
+										<input type="text" value="골드"/>
+									</td>
+									<td>
+										<input type="text" value="9%"/>
+									</td>
+									<td>
+										<span>1374</span>
+									</td>
+									<td>
+										<div class="btn-group">
+											<button class="btn btn-icon primary"><i class="fas fa-eraser"></i></button>
+											<button class="btn btn-icon primary"><i class="far fa-trash-alt"></i></button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>
+										<input type="text" value="실버"/>
+									</td>
+									<td>
+										<input type="text" value="10%"/>
+									</td>
+									<td>
+										<span>1374</span>
+									</td>
+									<td>
+										<div class="btn-group">
+											<button class="btn btn-icon primary"><i class="fas fa-eraser"></i></button>
+											<button class="btn btn-icon primary"><i class="far fa-trash-alt"></i></button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>
+
+<script>
+	$(function(){
+		$("#dateFrom").datepicker({
+			showOn: "both",
+			buttonImage: "img/calendar.svg",
+			// buttonImageOnly: true,
+			buttonText: "Calendar"
+		});
+
+		$("#dateTo").datepicker({
+			showOn: "both",
+			buttonImage: "img/calendar.svg",
+			// buttonImageOnly: true,
+			buttonText: "Calendar"
+		});
+
+		$("#foo-table").DataTable({
+			
+		}); 
+	});
+</script>

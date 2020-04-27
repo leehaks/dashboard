@@ -37,12 +37,16 @@
 }
 
 @mixin inputStyle {
-    background: #f6f6f6; 
+    background: #fff; 
     width: 100%; 
     min-height: 30px; 
     padding-left: .5em; 
     border: 1px solid #ddd; 
     border-radius: .225rem;
+
+    &:focus { 
+        box-shadow: 0 0 0 1px #96d4fd;
+    }
 }
 
 $borderBasic: 1px solid; 
@@ -57,10 +61,11 @@ $orange: #FF661A;
 .btn { 
     display: inline-block;
     background: transparent; 
-    min-width: 75px; 
-    min-height: 30px; 
-    line-height: 30px; 
+    min-width: 65px; 
+    min-height: 28px; 
+    line-height: 28px; 
     border: $borderBasic transparent; 
+    border-radius: .325rem;
     outline: none;
     padding: 0 1em; 
     text-align: center;
@@ -83,11 +88,17 @@ $orange: #FF661A;
         color: #fff; 
     }
 
-    &.link { 
+    &.btn-link { 
         min-width: 0; 
         min-height: 0; 
         padding: 0; 
         line-height: 1rem; 
+    }
+
+    &.btn-icon { 
+        min-width: 30px; 
+        padding: 0; 
+        i { opacity: 1 !important; }
     }
 }
 
@@ -127,7 +138,7 @@ $orange: #FF661A;
 /* profile component */
 
 .profile-component { 
-    background: #4d5573; 
+    // background: #4d5573; 
     padding: 1.5em 0; 
     margin-bottom: 1rem; 
 
@@ -199,13 +210,17 @@ $orange: #FF661A;
             color: $grey; 
         }
 
+        select, input { 
+            @include inputStyle();
+        }
+
         th { 
             @extend td;  
             font-family: 'NanumSquare-ExtraBold', san-serif;
         } 
         
         td { 
-            padding: .85em !important; 
+            padding: 1em !important; 
             border-bottom: $borderBasic $grey; 
             vertical-align: middle;
             text-align: center;
@@ -246,7 +261,7 @@ $orange: #FF661A;
     $headHeight: 45px; 
 
     .tit { 
-        background: #f4f7fb;
+        background: #f1f1f1;
         height: $headHeight; 
         line-height: $headHeight;
         padding: 0 1em; 
@@ -286,9 +301,7 @@ form {
 
     input { 
         @include inputStyle; 
-        &:focus { 
-            box-shadow: 0 0 0 1px #96d4fd;
-        }
+        
     }
 
     .sch-box, .chk-box, .rdo-box { 
@@ -305,6 +318,11 @@ form {
     .chk-box label::before, 
     .rdo-box label::before { 
         @include labelBefore; 
+    }
+
+    .chk-box label::after, 
+    .rdo-box label::after { 
+        display: none; 
     }
 
     .chk-box { 
@@ -338,22 +356,24 @@ form {
     .rdo-box { 
         input { 
             display: none; 
-            &:checked + label::before { 
-                border-color: $orange; 
+            &:checked + label::after { 
+                display: block; 
             }
         }
 
         label { 
-            &::before { border-width: 5px; }
+            &::before { 
+                border-radius: 50%;
+            }
             &::after { 
                 content: ''; 
-                background-color: #fff; 
+                background-color: #465266; 
                 width: 7px; 
                 height: 7px; 
                 position: absolute;
                 top: 14px; 
-                left: 4px;
-                border-radius: .15rem;
+                left: 5px;
+                border-radius: 50%;
             }
         }
     }
@@ -439,8 +459,8 @@ form {
             
             i { margin-right: .35rem; }; 
 
-            &.down { color: #60b5ef; }
-            &.up { color: #f97e98; }
+            &.down { color: #465266; }
+            &.up { color: #FF661A }
         }
     }
 }
@@ -496,7 +516,7 @@ form {
 
     select, input { 
         @include inputStyle();
-        margin-left: 0 !important
+        margin-left: 0 !important; 
     }
 
     .ui-toolbar { padding: 1em !important; }
@@ -538,6 +558,5 @@ form {
         &[class$="indi"] { background: #999999; }
         
     }
-
     
 }

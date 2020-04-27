@@ -72,7 +72,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
+								<tr data-id="article">
 									<td>1</td>
 									<td>2020년 설맞이 농축수산말 직거래장터 운영안내</td>
 									<td>서울시 강서구 양천로</td>
@@ -114,7 +114,16 @@
 </div>
 
 <script>
-	$("#foo-table").DataTable({
-			
-	}); 
+	$("#foo-table").DataTable({}); 
+
+	
+	$("#foo-table tbody tr").each(function(i, k){
+		$(k).click(function(e){
+			let linkId = $(this).attr('data-id');  
+			$(document).ready(function(){
+				$(linkId).load('#mainContent', "./html"+linkId+".html")
+			})
+		})
+	})
+	
 </script>

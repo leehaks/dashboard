@@ -18,17 +18,58 @@ $width: 225px;
     background: url('../img/login_background_PC.jpg'); 
 
     .dialog-box { 
-        max-width: 60%; 
-        max-height: 35vw; 
+        width: auto; 
+        height: 600px; 
 
         .login-component { 
             display: flex; 
+            align-items: center;
             height: inherit; 
             
             [class$="content"] { width: 50%; }
             .bg-content { 
                 background: url('../img/login_input_background.png') no-repeat; 
                 background-size: contain; 
+                width: 465px; 
+                height: 100%; 
+            }
+            .text-content { 
+                width: 100%; 
+                max-width: 405px; 
+                padding: 0 60px; 
+                margin: auto; 
+                .tit {
+                    margin-bottom: 2rem; 
+                    h2 {
+                        margin-bottom: 1rem; 
+                        line-height: 2rem;
+                        font-size: 1.75rem; 
+                        font-weight: 700; 
+                        strong { 
+                            color: #fe661a; 
+                        }
+                    }
+                }
+                .con { 
+                    input { 
+                        background: #fff; 
+                        padding: 0 1rem; 
+                        border-radius: 1rem;
+                        &[type="submit"] { 
+                            background: #fe661a; 
+                            color: #fff; 
+                        }
+                    }
+                    a { 
+                        font-size: .775rem; 
+                        color: #6c738c; 
+                    }
+                }
+                .bot { 
+                    margin-top: 5rem; 
+                    text-align: center;
+                    font-size: .85rem; 
+                }
             }
         }
     }
@@ -46,7 +87,7 @@ header {
 
 #headerMenu { 
     /* background: #15191c;  */
-    background: #394263; 
+    background:#465266; 
     width: $width; 
     min-width: $width; 
     height: 100%; 
@@ -115,7 +156,7 @@ main {
 }
 
 .page-main { 
-    background: #eaedf1; 
+    background: #f9f9f9; 
     height: calc(100vh - 60px); 
     padding: 1em; 
     overflow-x: hidden;
@@ -129,4 +170,12 @@ main {
 
     #headerHideBtn, 
     #headerShowBtn { display: inline-block; }
+}
+
+@media screen and ( max-width: 992px ) { 
+    #login { 
+        .bg-content { 
+            display: none; 
+        }
+    }
 }

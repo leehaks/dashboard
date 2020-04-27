@@ -529,6 +529,14 @@
   padding-bottom: 2rem !important;
 }
 
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
 .inline-block {
   display: inline-block !important;
 }

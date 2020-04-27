@@ -16,14 +16,17 @@
 }
 
 #login .dialog-box {
-  max-width: 60%;
-  max-height: 35vw;
+  width: auto;
+  height: 600px;
 }
 
 #login .dialog-box .login-component {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: inherit;
 }
 
@@ -34,6 +37,52 @@
 #login .dialog-box .login-component .bg-content {
   background: url("../img/login_input_background.png") no-repeat;
   background-size: contain;
+  width: 465px;
+  height: 100%;
+}
+
+#login .dialog-box .login-component .text-content {
+  width: 100%;
+  max-width: 405px;
+  padding: 0 60px;
+  margin: auto;
+}
+
+#login .dialog-box .login-component .text-content .tit {
+  margin-bottom: 2rem;
+}
+
+#login .dialog-box .login-component .text-content .tit h2 {
+  margin-bottom: 1rem;
+  line-height: 2rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+#login .dialog-box .login-component .text-content .tit h2 strong {
+  color: #fe661a;
+}
+
+#login .dialog-box .login-component .text-content .con input {
+  background: #fff;
+  padding: 0 1rem;
+  border-radius: 1rem;
+}
+
+#login .dialog-box .login-component .text-content .con input[type="submit"] {
+  background: #fe661a;
+  color: #fff;
+}
+
+#login .dialog-box .login-component .text-content .con a {
+  font-size: .775rem;
+  color: #6c738c;
+}
+
+#login .dialog-box .login-component .text-content .bot {
+  margin-top: 5rem;
+  text-align: center;
+  font-size: .85rem;
 }
 
 header {
@@ -49,7 +98,7 @@ header {
 
 #headerMenu {
   /* background: #15191c;  */
-  background: #394263;
+  background: #465266;
   width: 225px;
   min-width: 225px;
   height: 100%;
@@ -128,7 +177,7 @@ main {
 }
 
 .page-main {
-  background: #eaedf1;
+  background: #f9f9f9;
   height: calc(100vh - 60px);
   padding: 1em;
   overflow-x: hidden;
@@ -145,6 +194,12 @@ main {
   #headerHideBtn,
   #headerShowBtn {
     display: inline-block;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #login .bg-content {
+    display: none;
   }
 }
 /*# sourceMappingURL=page.css.map */

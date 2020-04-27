@@ -2,10 +2,11 @@
 .btn {
   display: inline-block;
   background: transparent;
-  min-width: 75px;
-  min-height: 30px;
-  line-height: 30px;
+  min-width: 65px;
+  min-height: 28px;
+  line-height: 28px;
   border: 1px solid transparent;
+  border-radius: .325rem;
   outline: none;
   padding: 0 1em;
   text-align: center;
@@ -28,11 +29,20 @@
   color: #fff;
 }
 
-.btn.link {
+.btn.btn-link {
   min-width: 0;
   min-height: 0;
   padding: 0;
   line-height: 1rem;
+}
+
+.btn.btn-icon {
+  min-width: 30px;
+  padding: 0;
+}
+
+.btn.btn-icon i {
+  opacity: 1 !important;
 }
 
 /* navigation */
@@ -79,7 +89,6 @@
 
 /* profile component */
 .profile-component {
-  background: #4d5573;
   padding: 1.5em 0;
   margin-bottom: 1rem;
 }
@@ -154,12 +163,26 @@
   border-color: #dbe1e8;
 }
 
+.table-component table select, .table-component table input {
+  background: #fff;
+  width: 100%;
+  min-height: 30px;
+  padding-left: .5em;
+  border: 1px solid #ddd;
+  border-radius: .225rem;
+}
+
+.table-component table select:focus, .table-component table input:focus {
+  -webkit-box-shadow: 0 0 0 1px #96d4fd;
+          box-shadow: 0 0 0 1px #96d4fd;
+}
+
 .table-component table th {
   font-family: 'NanumSquare-ExtraBold', san-serif;
 }
 
 .table-component table td, .table-component table th {
-  padding: .85em !important;
+  padding: 1em !important;
   border-bottom: 1px solid #dbe1e8;
   vertical-align: middle;
   text-align: center;
@@ -194,7 +217,7 @@
 }
 
 .card .tit {
-  background: #f4f7fb;
+  background: #f1f1f1;
   height: 45px;
   line-height: 45px;
   padding: 0 1em;
@@ -232,7 +255,7 @@ form label.label-tit {
 }
 
 form input {
-  background: #f6f6f6;
+  background: #fff;
   width: 100%;
   min-height: 30px;
   padding-left: .5em;
@@ -285,6 +308,11 @@ form .rdo-box label::before {
   margin-right: .5rem;
 }
 
+form .chk-box label::after,
+form .rdo-box label::after {
+  display: none;
+}
+
 form .chk-box input {
   display: none;
 }
@@ -312,23 +340,23 @@ form .rdo-box input {
   display: none;
 }
 
-form .rdo-box input:checked + label::before {
-  border-color: #FF661A;
+form .rdo-box input:checked + label::after {
+  display: block;
 }
 
 form .rdo-box label::before {
-  border-width: 5px;
+  border-radius: 50%;
 }
 
 form .rdo-box label::after {
   content: '';
-  background-color: #fff;
+  background-color: #465266;
   width: 7px;
   height: 7px;
   position: absolute;
   top: 14px;
-  left: 4px;
-  border-radius: .15rem;
+  left: 5px;
+  border-radius: 50%;
 }
 
 form .sch-box input[type="text"] {
@@ -408,11 +436,11 @@ form .sel-box select {
 }
 
 .img-component .txt-box .compare-num.down {
-  color: #60b5ef;
+  color: #465266;
 }
 
 .img-component .txt-box .compare-num.up {
-  color: #f97e98;
+  color: #FF661A;
 }
 
 .dialog-component {
@@ -464,13 +492,18 @@ form .sel-box select {
 }
 
 .dataTables_wrapper select, .dataTables_wrapper input {
-  background: #f6f6f6;
+  background: #fff;
   width: 100%;
   min-height: 30px;
   padding-left: .5em;
   border: 1px solid #ddd;
   border-radius: .225rem;
   margin-left: 0 !important;
+}
+
+.dataTables_wrapper select:focus, .dataTables_wrapper input:focus {
+  -webkit-box-shadow: 0 0 0 1px #96d4fd;
+          box-shadow: 0 0 0 1px #96d4fd;
 }
 
 .dataTables_wrapper .ui-toolbar {
