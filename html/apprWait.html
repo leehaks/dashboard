@@ -115,15 +115,4 @@
 
 <script>
 	$("#foo-table").DataTable({}); 
-
-	
-	$("#foo-table tbody tr").each(function(i, k){
-		$(k).click(function(e){
-			let linkId = $(this).attr('data-id');  
-			$(document).ready(function(){
-				$(linkId).load('#mainContent', "./html"+linkId+".html")
-			})
-		})
-	})
-	
 </script>

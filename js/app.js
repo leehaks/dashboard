@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
     htmlLoad("header", "./html/header.html"); 
-    htmlLoad("#mainContent", "./html/apprWait.html"); 
+    htmlLoad("#mainContent", "./html/article.html"); 
     htmlLoad("#mainHead", "./html/pagehead.html"); 
  });
 
@@ -11,15 +11,14 @@ function htmlLoad(selector, htmlPath) {
         pageLoad(); 
         headerToggleBtn(); 
         scrollbar(); 
-        tableLink(); 
     }); 
 }
 
-function scrollbar() { 
-    $('#header').mCustomScrollbar({
-        theme:"minimal"
-    })
-}
+// function scrollbar() { 
+//     $('#header').mCustomScrollbar({
+//         theme:"minimal"
+//     })
+// }
 
 function targetTitle() { 
     $('a span').each(function(i, textVal){    
