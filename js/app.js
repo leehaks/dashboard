@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
     htmlLoad("header", "./html/header.html"); 
-    htmlLoad("#mainContent", "./html/article.html"); 
+    htmlLoad("#mainContent", "./html/dashboard.html"); 
     htmlLoad("#mainHead", "./html/pagehead.html"); 
  });
 
@@ -10,7 +10,7 @@ function htmlLoad(selector, htmlPath) {
         targetTitle(); 
         pageLoad(); 
         headerToggleBtn(); 
-        scrollbar(); 
+        // scrollbar(); 
     }); 
 }
 
@@ -19,6 +19,9 @@ function htmlLoad(selector, htmlPath) {
 //         theme:"minimal"
 //     })
 // }
+
+function dialog(elem) { $(elem).addClass('on') }
+function dialogOff(elem) { $(elem).removeClass('on') }
 
 function targetTitle() { 
     $('a span').each(function(i, textVal){    

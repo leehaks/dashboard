@@ -92,7 +92,7 @@
 .flex { 
     display: flex; 
     display: -ms-flexbox; 
-    height: inherit; 
+    // height: inherit; 
 }
 
 .col { 
@@ -250,3 +250,6 @@
 .text-left { text-align: left !important; }
 .text-right { text-align: right !important; } 
 .text-center { text-align: center !important; }
+
+//----- Border 
+

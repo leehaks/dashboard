@@ -146,7 +146,6 @@
   display: -webkit-box;
   display: flex;
   display: -ms-flexbox;
-  height: inherit;
 }
 
 .col {

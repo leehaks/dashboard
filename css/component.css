@@ -2,11 +2,11 @@
 .btn {
   display: inline-block;
   background: transparent;
-  min-width: 65px;
+  min-width: 75px;
   min-height: 28px;
   line-height: 28px;
   border: 1px solid transparent;
-  border-radius: .325rem;
+  border-radius: .225rem;
   outline: none;
   padding: 0 1em;
   text-align: center;
@@ -43,6 +43,19 @@
 
 .btn.btn-icon i {
   opacity: 1 !important;
+}
+
+.btn.btn-border {
+  border: 1px solid currentColor;
+}
+
+.btn.btn-border.primary {
+  background: #fff;
+  color: #1f76b8;
+}
+
+.btn-group .btn:not(:first-child) {
+  margin-left: .725rem;
 }
 
 /* navigation */
@@ -182,6 +195,7 @@
 }
 
 .table-component table td, .table-component table th {
+  background: #fff;
   padding: 1em !important;
   border-bottom: 1px solid #dbe1e8;
   vertical-align: middle;
@@ -192,6 +206,19 @@
 
 .table-component table td:first-child, .table-component table th:first-child {
   border-left: 1px solid #dbe1e8;
+}
+
+.table-component table td.tit, .table-component table th.tit {
+  background: #f9f9f9;
+  width: 110px;
+}
+
+.table-component table td.article-content, .table-component table th.article-content {
+  text-align: left;
+}
+
+.table-component table td.article-content ul li, .table-component table th.article-content ul li {
+  margin-top: .5rem;
 }
 
 .table-component table tbody tr:nth-child(odd) {
@@ -216,7 +243,7 @@
   border: 1px solid #dbe1e8;
 }
 
-.card .tit {
+.card > .tit {
   background: #f1f1f1;
   height: 45px;
   line-height: 45px;
@@ -226,7 +253,7 @@
   border-bottom: 1px solid #dbe1e8;
 }
 
-.card .tit span[id] {
+.card > .tit span[id] {
   font-weight: 700;
 }
 
@@ -235,9 +262,8 @@
 }
 
 .card .bot {
-  height: 60px;
-  line-height: 60px;
-  padding: 0 1em;
+  padding: 1em;
+  border-top: 1px solid #dbe1e8;
 }
 
 /* chart */
@@ -391,6 +417,14 @@ form .sel-box select {
   padding-right: 2.75em;
 }
 
+textarea {
+  width: 100%;
+  height: 100%;
+  min-height: 150px;
+  border: none;
+  resize: none;
+}
+
 /*  */
 .img-component[data-flow="row"] {
   display: -webkit-box;
@@ -444,9 +478,12 @@ form .sel-box select {
 }
 
 .dialog-component {
-  position: relative;
+  background: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
   height: 100vh;
-  padding: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -456,16 +493,44 @@ form .sel-box select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 100;
+  display: none;
+}
+
+.dialog-component.on {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .dialog-component .dialog-box {
   width: 100%;
-  height: 100%;
+  max-width: 1000px;
+  height: auto;
   background: #fff;
+  padding: 1.25em;
   -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.35);
           box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.35);
-  border-radius: 3rem;
+  border-radius: .825rem;
   overflow: hidden;
+}
+
+.dialog-component .dialog-box.sm {
+  max-width: 700px;
+}
+
+.dialog-component .dialog-box.lg {
+  max-width: 1200px;
+}
+
+.dialog-component .dialog-box .tit {
+  border-bottom: 1px solid #dbe1e8;
+  font-size: .775rem;
+  font-weight: 700;
+}
+
+.dialog-component .dialog-box .con {
+  padding: 1em 0;
 }
 
 .block-tit {

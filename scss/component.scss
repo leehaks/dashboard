@@ -61,11 +61,11 @@ $orange: #FF661A;
 .btn { 
     display: inline-block;
     background: transparent; 
-    min-width: 65px; 
+    min-width: 75px; 
     min-height: 28px; 
     line-height: 28px; 
     border: $borderBasic transparent; 
-    border-radius: .325rem;
+    border-radius: .225rem;
     outline: none;
     padding: 0 1em; 
     text-align: center;
@@ -74,9 +74,7 @@ $orange: #FF661A;
     color: currentColor; 
     // transform: skew(-0.1deg); 
 
-    span {
-        margin-left: .5rem;
-    }
+    span { margin-left: .5rem; }
 
     i { 
         font-size: 1em; 
@@ -99,6 +97,20 @@ $orange: #FF661A;
         min-width: 30px; 
         padding: 0; 
         i { opacity: 1 !important; }
+    }
+
+    &.btn-border { 
+        border: 1px solid currentColor;
+        &.primary { 
+            background: #fff; 
+            color: #1f76b8; 
+        }
+    }
+}
+
+.btn-group { 
+    .btn:not(:first-child) {
+        margin-left: .725rem;
     }
 }
 
@@ -220,6 +232,7 @@ $orange: #FF661A;
         } 
         
         td { 
+            background: #fff; 
             padding: 1em !important; 
             border-bottom: $borderBasic $grey; 
             vertical-align: middle;
@@ -228,6 +241,17 @@ $orange: #FF661A;
             color: currentColor; 
             &:first-child { 
                 border-left: $borderBasic $grey; 
+            }
+            &.tit { 
+                background: #f9f9f9; 
+                width: 110px; 
+            }
+
+            &.article-content { 
+                text-align: left; 
+                ul li { 
+                    margin-top: .5rem; 
+                }
             }
         }
 
@@ -252,6 +276,7 @@ $orange: #FF661A;
     }
 }
 
+
 /* card */
 
 .card { 
@@ -260,7 +285,7 @@ $orange: #FF661A;
 
     $headHeight: 45px; 
 
-    .tit { 
+    &>.tit { 
         background: #f1f1f1;
         height: $headHeight; 
         line-height: $headHeight;
@@ -275,9 +300,10 @@ $orange: #FF661A;
     .con { padding: 1em; }
 
     .bot { 
-        height: $headHeight + 15px; 
-        line-height: $headHeight + 15px;
-        padding: 0 1em; 
+        // height: $headHeight + 15px; 
+        // line-height: $headHeight + 15px;
+        padding: 1em; 
+        border-top: 1px solid #dbe1e8;
     }
 }
 
@@ -301,7 +327,6 @@ form {
 
     input { 
         @include inputStyle; 
-        
     }
 
     .sch-box, .chk-box, .rdo-box { 
@@ -417,6 +442,13 @@ form {
     }
 } 
 
+textarea { 
+    width: 100%; 
+    height: 100%; 
+    min-height: 150px; 
+    border: none; 
+    resize: none; 
+}
 
 /*  */
 
@@ -468,20 +500,40 @@ form {
 // 
 
 .dialog-component { 
-    position: relative;
+    background: rgba(0,0,0,0.35); 
+    position: absolute;
+    top:0; 
+    left: 0; 
+    width: 100vw; 
     height: 100vh; 
-    padding: 3rem; 
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 100;
+    display: none;
+
+    &.on { display: flex; }
 
     .dialog-box { 
         width: 100%; 
-        height: 100%; 
+        max-width: 1000px; 
+        height: auto; 
         background: #fff; 
+        padding: 1.25em; 
         box-shadow: 0 0 12px 0 rgba(0,0,0,0.35); 
-        border-radius: 3rem;
+        border-radius: .825rem;
         overflow: hidden;
+
+        &.sm { max-width: 700px; }
+        &.lg { max-width: 1200px; }
+
+        .tit { 
+            border-bottom: 1px solid #dbe1e8; 
+            font-size: .775rem; 
+            font-weight: 700;
+        }
+
+        .con { padding: 1em 0; }
     }
 }
 
